@@ -1,4 +1,4 @@
-package sample;
+package be.uclouvain.lingi2252.smarthome;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

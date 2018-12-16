@@ -1,0 +1,34 @@
+{
+  "rooms": {
+    "entrance": {
+      "sensor": { "camera" : 2, "contact_sensor" : 2},
+      "equipment": [ "doors", "windows", "lights" ]
+    },
+    "kitchen": {
+      "sensor": { "camera" : 2, "contact_sensor" : 2},
+      "equipment": [ "doors", "windows", "cookers", "lights" ]
+    },
+    "bedroom": {
+      "sensor": { "camera" : 2, "contact_sensor" : 2 },
+      "equipment": [ "doors", "windows", "lights" ]
+    },
+    "bathroom": {
+      "sensor": { "camera" : 2, "contact_sensor" : 2},
+      "equipment": [ "doors", "windows", "lights" ]
+    }
+  },
+  "users": {
+    "matilde": 1,
+    "quentin": 1,
+    "adalberto": 1,
+    "julie": 0
+  },
+  "additional_features": {
+    "air_quality_tester": false,
+    "alarm_system": true,
+    "smart_assistant": false,
+    "lock_down": true,
+    "evacuation": false,
+    "object_tracking": false
+  }
+}

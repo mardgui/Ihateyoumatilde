@@ -1,0 +1,46 @@
+{
+  "rooms": {
+    "entrance": {
+      "sensor": { "camera" : 2, "air_sensor": 1, "motion_sensor": 1, "temperature_sensor": 1, "contact_sensor": 1 },
+      "equipment": [ "doors", "windows", "lights", "heaters", "conditioners", "fireplaces" ]
+    },
+    "kitchen": {
+      "sensor": { "camera" : 2, "air_sensor": 1, "motion_sensor": 1, "temperature_sensor": 1 },
+      "equipment": [ "doors", "windows", "cookers", "lights", "heaters", "conditioners" ]
+    },
+    "living_room": {
+      "sensor": { "camera" : 3, "air_sensor": 1, "motion_sensor": 2, "temperature_sensor": 1 },
+      "equipment": [ "doors", "windows", "lights", "heaters", "conditioners", "fireplaces" ]
+    },
+    "bedroom": {
+      "sensor": { "camera" : 2, "air_sensor": 1, "motion_sensor": 1, "temperature_sensor": 1 },
+      "equipment": [ "doors", "windows", "lights", "heaters", "conditioners", "fireplaces" ]
+    },
+    "bathroom": {
+      "sensor": { "camera" : 2, "air_sensor": 1, "motion_sensor": 1, "temperature_sensor": 1 },
+      "equipment": [ "doors", "lights", "heaters", "conditioners" ]
+    },
+    "garden": {
+      "sensor": { "camera" : 5, "temperature_sensor": 1 }
+    }
+  },
+  "users": {
+    "matilde": 0,
+    "quentin": 1,
+    "adalberto": 1,
+    "julie": 1
+  },
+  "additional_features": {
+    "air_quality_tester": true,
+    "alarm_system": true,
+    "smart_assistant": true,
+    "lock_down": false,
+    "evacuation": true,
+    "object_tracking": true
+  },
+  "air_quality_thresholds":{
+    "humidity": 0.8,
+    "fine_particles": 10000.0,
+    "harmful_gas": 100.0
+  }
+}

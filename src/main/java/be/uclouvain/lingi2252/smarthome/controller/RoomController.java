@@ -49,12 +49,6 @@ public class RoomController {
     @FXML
     public void initialize(Room room) {
         this.room = room;
-        fill(this.room);
-
-    }
-
-    private void fill(){
-
         this.room_box = new Rectangle(1,1,50, 50);
         lightON.setVisible(false);
         lightOFF.setVisible(false);
@@ -62,9 +56,11 @@ public class RoomController {
         conditionerOFF.setVisible(false);
         heaterON.setVisible(false);
         heaterOFF.setVisible(false);
+        fill();
 
+    }
 
-
+    private void fill(){
         for (Actuator actuator : room.getActuatorList()) {
             if (actuator instanceof Lights) {
                 lightOFF.setVisible(true);
@@ -79,6 +75,8 @@ public class RoomController {
                 this.heaterOFF = new Rectangle(10,10,10,10);
             }
         }
-        room_label.setText("");
+        //room_label.setText("");
     }
+
+    //TODO methods to turn on / off actuators
 }

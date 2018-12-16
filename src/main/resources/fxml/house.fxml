@@ -7,6 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
+<?import org.controlsfx.control.GridView?>
 <AnchorPane prefHeight="400.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.uclouvain.lingi2252.smarthome.controller.HouseController">
    <children>
       <SplitPane dividerPositions="0.10301507537688442" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="586.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -21,6 +22,9 @@
                         <Insets left="20.0" />
                      </padding>
                   </Label>
+                   <GridView fx:id="roomGridView" maxWidth="800.0">
+
+                   </GridView>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />

@@ -20,17 +20,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HouseController implements Initializable {
+public class HouseController {
 
     @FXML private AnchorPane housePane;
     private ObservableList<Room> roomList = FXCollections.observableArrayList();
     @FXML private GridView<Room> roomGridView;
-    private House house;
+    private House house = House.getInstance();
     private String houseName;
     @FXML private Rectangle room_box;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    public void initialize() {
 
         /*for (Room room : this.house.getRooms()){
             room_box = new Rectangle( 10, 10, 10, 10);

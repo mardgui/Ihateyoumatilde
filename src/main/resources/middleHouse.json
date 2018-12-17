@@ -1,0 +1,6 @@
+[{"Name": "entrance", "Actuator1": "lights", "Actuator2" : "heaters", "Actuator3":"conditioners", "Actuator4": "doors", "Actuator5": "windows", "User1" : "matilde", "User2": "quentin", "User3" : "adalberto", "User4" : "julie"},
+  {"Name": "kitchen", "Actuator1": "lights", "Actuator2" : "heaters", "Actuator3":"conditioners", "Actuator4": "doors", "Actuator5": "windows", "User1" : "matilde", "User2": "quentin", "User3" : "adalberto", "User4" : "julie"},
+  {"Name": "living_room", "Actuator1": "lights", "Actuator2" : "heaters", "Actuator3":"conditioners", "Actuator4": "doors", "Actuator5": "windows", "User1" : "matilde", "User2": "quentin", "User3" : "adalberto", "User4" : "julie"},
+  {"Name": "bedroom", "Actuator1": "lights", "Actuator2" : "heaters", "Actuator3":"conditioners", "Actuator4": "doors", "Actuator5": "windows", "User1" : "matilde", "User2": "quentin", "User3" : "adalberto", "User4" : "julie"},
+  {"Name": "bathroom", "Actuator1": "lights", "Actuator2" : "heaters", "Actuator3":"conditioners", "Actuator4": "doors", "Actuator5": "windows", "User1" : "matilde", "User2": "quentin", "User3" : "adalberto", "User4" : "julie"}]
+

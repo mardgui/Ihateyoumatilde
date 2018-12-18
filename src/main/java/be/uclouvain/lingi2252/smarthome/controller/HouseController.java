@@ -16,7 +16,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class HouseController {
     private ObservableList<Room> roomList = FXCollections.observableArrayList();
@@ -58,8 +57,8 @@ public class HouseController {
                                         // Display content of the fxml file
                                         this.setGraphic(gridElement);
 
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
+                                    } catch (Exception e) {
+                                        //e.printStackTrace();
                                     }
                                 } else {
                                     this.setGraphic(null);

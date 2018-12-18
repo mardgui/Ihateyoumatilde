@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-
-<?import org.controlsfx.control.GridView?>
 <?import be.uclouvain.lingi2252.smarthome.console.Console?>
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.uclouvain.lingi2252.smarthome.controller.HouseController">
-   <children>
-      <SplitPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane prefHeight="800.0" prefWidth="1200.0">
-               <children>
-                  <!--<Label layoutX="113.0" layoutY="11.0" prefHeight="38.4" prefWidth="584.8" text="Home Setting" textAlignment="CENTER" textFill="#0000009b" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <font>
-                        <Font name="Roboto Bold" size="18.0" />
-                     </font>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </Label>-->
-                   <GridView fx:id="roomGridView" prefWidth="700.0" prefHeight="800.0">
-                       <!--maxWidth="800.0" minWidth="400.0" maxHeight="800.0" minHeight="400.0" horizontalCellSpacing="10.0" verticalCellSpacing="10.0"-->
-
-                   </GridView>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="500.0">
-              <Console prefHeight="800.0" prefWidth="500.0"/>
-          </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.GridView?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="800.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="be.uclouvain.lingi2252.smarthome.controller.HouseController">
+    <children>
+        <SplitPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+                    <children>
+                        <GridView fx:id="roomGridView" prefWidth="700.0" prefHeight="800.0">
+                        </GridView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="500.0">
+                    <Console prefHeight="800.0" prefWidth="500.0"/>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
 </AnchorPane>

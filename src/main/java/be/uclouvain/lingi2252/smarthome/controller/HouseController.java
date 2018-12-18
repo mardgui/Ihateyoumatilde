@@ -2,32 +2,30 @@ package be.uclouvain.lingi2252.smarthome.controller;
 
 import be.uclouvain.lingi2252.groupN.House;
 import be.uclouvain.lingi2252.groupN.Room;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.ListCell;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Callback;
-import org.controlsfx.control.GridView;
 import org.controlsfx.control.GridCell;
-
-import javafx.collections.ObservableList;
-import javafx.collections.FXCollections;
-import javafx.scene.layout.AnchorPane;
-import javafx.fxml.FXML;
+import org.controlsfx.control.GridView;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class HouseController {
 
-    @FXML private AnchorPane housePane;
+    @FXML
+    private AnchorPane housePane;
     private ObservableList<Room> roomList = FXCollections.observableArrayList();
-    @FXML private GridView<Room> roomGridView;
+    @FXML
+    private GridView<Room> roomGridView;
     private House house = House.getInstance();
     private String houseName;
-    @FXML private Rectangle room_box;
+    @FXML
+    private Rectangle room_box;
 
     @FXML
     public void initialize() {
@@ -64,10 +62,10 @@ public class HouseController {
                                     try {
                                         String fxmlFile = "/fxml/room.fxml";
                                         FXMLLoader loader = new FXMLLoader();
-                                        Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
+                                        Parent gridElement = loader.load(getClass().getResourceAsStream(fxmlFile));
                                         ((RoomController) loader.getController()).initialize(item); //TODO
                                         // Display content of the fxml file
-                                        this.setGraphic(listElement);
+                                        this.setGraphic(gridElement);
 
                                     } catch (IOException e) {
                                         e.printStackTrace();
@@ -81,6 +79,10 @@ public class HouseController {
                     }
                 });
 
+        roomGridView.setCellHeight(200.0);
+        roomGridView.setCellWidth(200.0);
+        roomGridView.setHorizontalCellSpacing(10.0);
+        roomGridView.setVerticalCellSpacing(10.0);
 
     }
 }

@@ -13,14 +13,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parameterization.getInstance().initialize(Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "middleclassHouse.json").toString());
+        Parameterization.getInstance().initialize(Paths.get(System.getProperty("user.dir"), "src", "main", "resources", "richHouse.json").toString());
 
         String fxmlFile = "/fxml/house.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent rootNode = (Parent) fxmlLoader.load(getClass().getResourceAsStream(fxmlFile));
 
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(rootNode, 600, 400));
+        primaryStage.setScene(new Scene(rootNode, 1000, 800));
         primaryStage.show();
     }
 

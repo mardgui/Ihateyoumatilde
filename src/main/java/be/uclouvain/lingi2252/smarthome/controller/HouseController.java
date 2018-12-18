@@ -2,81 +2,53 @@ package be.uclouvain.lingi2252.smarthome.controller;
 
 import be.uclouvain.lingi2252.groupN.House;
 import be.uclouvain.lingi2252.groupN.Room;
-import be.uclouvain.lingi2252.smarthome.GridDisplay;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-import javafx.util.Callback;
-import org.controlsfx.control.GridView;
-import org.controlsfx.control.GridCell;
-
-import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
-import javafx.scene.layout.AnchorPane;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Rectangle;
+import javafx.util.Callback;
+import org.controlsfx.control.GridCell;
+import org.controlsfx.control.GridView;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.List;
-import java.util.ResourceBundle;
 
 public class HouseController {
 
-    @FXML private AnchorPane housePane;
+    @FXML
+    private AnchorPane housePane;
     private ObservableList<Room> roomList = FXCollections.observableArrayList();
-    @FXML private GridView<Room> roomGridView;
+    @FXML
+    private GridView<Room> roomGridView;
     private House house = House.getInstance();
     private String houseName;
-    private GridDisplay gridDisplay;
-    @FXML private Rectangle room_box;
-
-    private void buildTextFieldActions(final TextField rowField, final TextField columnField) {
-        rowField.focusedProperty().addListener((ov, t, t1) -> {
-            if (!t1) {
-                if (!rowField.getText().equals("")) {
-                    try {
-                        int nbRow = Integer.parseInt(rowField.getText());
-                        gridDisplay.setRows(nbRow);
-                    } catch (NumberFormatException nfe) {
-                        System.out.println("Please enter a valid number.");
-                    }
-                }
-            }
-        });
-
-        columnField.focusedProperty().addListener((ov, t, t1) -> {
-            if (!t1) {
-                if (!columnField.getText().equals("")) {
-                    try {
-                        int nbColumn = Integer.parseInt(columnField.getText());
-                        gridDisplay.setColumns(nbColumn);
-                    } catch (NumberFormatException nfe) {
-                        System.out.println("Please enter a valid number.");
-                    }
-                }
-            }
-        });
-    }
-
+    @FXML
+    private Rectangle room_box;
 
     @FXML
     public void initialize() {
 
+        /*for (Room room : this.house.getRooms()){
+            room_box = new Rectangle( 10, 10, 10, 10);
+            roomList.add(room_box);
+        }*/
 
+        /*GridView<Color> myGrid = new GridView<>(list_room);
+        myGrid.setCellFactory(new Callback<GridView<Color>, GridCell<Color>>() {
+            public GridCell<Color> call(GridView<Color> gridView) {
+                return new ColorGridCell();
+            }
+        });
 
-        /*
+        Random r = new Random(System.currentTimeMillis());
+        for(int i = 0; i < 500; i++) {
+            list_room.add(new Color(r.nextDouble(), r.nextDouble(), r.nextDouble(), 1.0));
+        }
+        */
         roomList.addAll(house.getRooms());
         roomGridView.setItems(roomList);
-
 
         this.roomGridView.setCellFactory(
                 new Callback<GridView<Room>, GridCell<Room>>() {
@@ -90,10 +62,10 @@ public class HouseController {
                                     try {
                                         String fxmlFile = "/fxml/room.fxml";
                                         FXMLLoader loader = new FXMLLoader();
-                                        Parent listElement = loader.load(getClass().getResourceAsStream(fxmlFile));
+                                        Parent gridElement = loader.load(getClass().getResourceAsStream(fxmlFile));
                                         ((RoomController) loader.getController()).initialize(item); //TODO
                                         // Display content of the fxml file
-                                        this.setGraphic(listElement);
+                                        this.setGraphic(gridElement);
 
                                     } catch (IOException e) {
                                         e.printStackTrace();
@@ -107,53 +79,10 @@ public class HouseController {
                     }
                 });
 
-    */
-
-
-
-
-
-
-        List roomList = house.getRooms();
-        System.out.println("roomList = " + roomList + "\n roomList size = " + roomList.size());
-        //List<String> roomNames = roomList.stream().map(room -> room.getName()).collect(Collectors.toList());
-
-        if ( (roomList.size() & 1) == 0 ) {
-            System.out.println("Even");
-            System.out.println("Rooms:\n");
-            for (int i = 0; i < roomList.size(); i++){
-                System.out.println();
-            }
-            gridDisplay = new GridDisplay(roomList.size()/2,roomList.size()/2);
-        }
-        else{
-            System.out.println("Odd");
-            int numRow = Math.round(roomList.size()/2);
-            int numCol = roomList.size() - numRow;
-            System.out.println("Num row = " + numRow + "\n Num col = " + numCol);
-            gridDisplay = new GridDisplay(numRow,numCol);
-        }
-        //Fields to specify number of rows/columns
-        TextField rowField = new TextField("2");
-        TextField columnField = new TextField("4");
-
-        //Function to set an action when text field loses focus
-        buildTextFieldActions(rowField, columnField);
-
-        HBox fields = new HBox(10);
-        fields.getChildren().add(rowField);
-        fields.getChildren().add(new Label("x"));
-        fields.getChildren().add(columnField);
-
-        BorderPane mainPanel = new BorderPane();
-        mainPanel.setCenter(gridDisplay.getDisplay());
-        mainPanel.setTop(fields);
-        Scene scene = new Scene(mainPanel, 1000, 800);
-        Stage primaryStage = new Stage();
-        primaryStage.setTitle("Test grid display");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
+        roomGridView.setCellHeight(200.0);
+        roomGridView.setCellWidth(200.0);
+        roomGridView.setHorizontalCellSpacing(10.0);
+        roomGridView.setVerticalCellSpacing(10.0);
 
     }
 }

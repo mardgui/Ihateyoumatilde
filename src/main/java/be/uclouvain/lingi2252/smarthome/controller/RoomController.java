@@ -49,7 +49,7 @@ public class RoomController {
     @FXML
     public void initialize(Room room) {
         this.room = room;
-        this.room_box = new Rectangle(1,1,50, 50);
+        //this.room_box = new Rectangle(1,1,50, 50);
         lightON.setVisible(false);
         lightOFF.setVisible(false);
         conditionerON.setVisible(false);
@@ -64,15 +64,15 @@ public class RoomController {
         for (Actuator actuator : room.getActuatorList()) {
             if (actuator instanceof Lights) {
                 lightOFF.setVisible(true);
-                this.lightOFF = new Rectangle(10,10,10,10);
+                //this.lightOFF = new Rectangle(10,10,10,10);
             }
             if (actuator instanceof Conditioners) {
                 conditionerOFF.setVisible(true);
-                this.conditionerOFF = new Rectangle(10,10,10,10);
+                //this.conditionerOFF = new Rectangle(10,10,10,10);
             }
             if (actuator instanceof Heaters) {
                 heaterOFF.setVisible(true);
-                this.heaterOFF = new Rectangle(10,10,10,10);
+                //this.heaterOFF = new Rectangle(10,10,10,10);
             }
         }
         //room_label.setText("");

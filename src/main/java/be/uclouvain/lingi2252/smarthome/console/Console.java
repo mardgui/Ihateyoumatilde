@@ -33,14 +33,6 @@ public class Console extends BorderPane {
                     output.appendText(text + System.lineSeparator());
                     output.appendText(CommandReceiver.getInstance().receiveCommand(text) + System.lineSeparator());
                     Main.getHouseController().initialize();
-//                    try {
-//                        String fxmlFile = "/fxml/house.fxml";
-//                        FXMLLoader loader = new FXMLLoader();
-//                        loader.load(getClass().getResourceAsStream(fxmlFile));
-//                        ((HouseController) loader.getController()).initialize();
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
                     history.add(text);
                     historyPointer++;
                     if (onMessageReceivedHandler != null) {

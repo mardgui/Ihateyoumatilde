@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.uclouvain.lingi2252.smarthome.controller.RoomController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c2f0ff" height="200.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle fx:id="bigRectangle" arcHeight="5.0" arcWidth="5.0" height="200.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <GridPane alignment="CENTER" layoutX="14.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

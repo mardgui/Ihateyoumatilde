@@ -9,6 +9,7 @@ import be.uclouvain.lingi2252.groupN.actuators.Lights;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
 public class RoomController {
@@ -27,12 +28,18 @@ public class RoomController {
     private Rectangle heaterON;
     @FXML
     private Rectangle heaterOFF;
+    @FXML
+    private Rectangle bigRectangle;
     private Room room;
 
 
     @FXML
-    public void initialize(Room room) {
+    public void initialize(Room room, boolean busy) {
         this.room = room;
+
+        if (busy) bigRectangle.setFill(Paint.valueOf("#90ee90"));
+        else bigRectangle.setFill(Paint.valueOf("#d3d3d3"));
+
         lightON.setVisible(false);
         lightOFF.setVisible(false);
         conditionerON.setVisible(false);

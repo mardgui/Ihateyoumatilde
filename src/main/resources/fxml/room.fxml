@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -21,36 +22,37 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Rectangle fx:id="lightON" arcHeight="5.0" arcWidth="5.0" fill="#edfc7f" height="34.0" stroke="BLACK" strokeType="INSIDE" width="39.0">
+            <Rectangle fx:id="lightON" arcHeight="5.0" arcWidth="5.0" fill="#edfc7f" height="34.0" stroke="BLACK" strokeType="INSIDE" width="39.0" onMouseClicked="#lightOnClicked">
                <GridPane.margin>
                   <Insets left="35.0" />
                </GridPane.margin>
             </Rectangle>
-            <Rectangle fx:id="heaterON" arcHeight="5.0" arcWidth="5.0" fill="#fa877f" height="34.0" layoutX="35.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="39.0" GridPane.columnIndex="1">
+            <Rectangle fx:id="heaterON" arcHeight="5.0" arcWidth="5.0" fill="#fa877f" height="34.0" layoutX="35.0" layoutY="27.0" stroke="BLACK" onMouseClicked="#heaterOnClicked" strokeType="INSIDE" width="39.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="35.0" />
                </GridPane.margin>
             </Rectangle>
-            <Rectangle fx:id="conditionerON" arcHeight="5.0" arcWidth="5.0" fill="#a37ffa" height="34.0" layoutX="142.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="39.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Rectangle fx:id="conditionerON" arcHeight="5.0" arcWidth="5.0" fill="#a37ffa" height="34.0" layoutX="142.0" layoutY="27.0" stroke="BLACK" onMouseClicked="#conditionerOnClicked" strokeType="INSIDE" width="39.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="35.0" />
                </GridPane.margin>
             </Rectangle>
-            <Rectangle fx:id="lightOFF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="45.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="39.0">
+            <Rectangle fx:id="lightOFF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="45.0" layoutY="27.0" onMouseClicked="#lightOffClicked" stroke="BLACK" strokeType="INSIDE" width="39.0">
                <GridPane.margin>
                   <Insets left="35.0" />
                </GridPane.margin>
             </Rectangle>
-            <Rectangle fx:id="heaterOFF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="152.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="39.0" GridPane.columnIndex="1">
+            <Rectangle fx:id="heaterOFF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="152.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" onMouseClicked="#heaterOffClicked" width="39.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="35.0" />
                </GridPane.margin>
             </Rectangle>
-            <Rectangle fx:id="conditionerOFF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="152.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" width="39.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Rectangle fx:id="conditionerOFF" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="152.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" onMouseClicked="#conditionerOffClicked" width="39.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="35.0" />
                </GridPane.margin>
             </Rectangle>
+            <Label fx:id="name" text="Label" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>

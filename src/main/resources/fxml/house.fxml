@@ -14,20 +14,21 @@
         <items>
           <AnchorPane prefHeight="130.0" prefWidth="585.0">
                <children>
-                  <Label layoutX="113.0" layoutY="11.0" prefHeight="38.4" prefWidth="584.8" text="Home Setting" textAlignment="CENTER" textFill="#0000009b" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <!--<Label layoutX="113.0" layoutY="11.0" prefHeight="38.4" prefWidth="584.8" text="Home Setting" textAlignment="CENTER" textFill="#0000009b" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Roboto Bold" size="18.0" />
                      </font>
                      <padding>
                         <Insets left="20.0" />
                      </padding>
-                  </Label>
-                   <GridView fx:id="roomGridView" maxWidth="800.0">
+                  </Label>-->
+                   <GridView fx:id="roomGridView" prefWidth="500.0" prefHeight="300.0">
+                       <!--maxWidth="800.0" minWidth="400.0" maxHeight="800.0" minHeight="400.0" horizontalCellSpacing="10.0" verticalCellSpacing="10.0"-->
 
                    </GridView>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <!--<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />-->
         </items>
       </SplitPane>
    </children>

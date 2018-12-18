@@ -20,7 +20,7 @@ public class Main extends Application {
         Parent rootNode = (Parent) fxmlLoader.load(getClass().getResourceAsStream(fxmlFile));
 
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(rootNode, 300, 275));
+        primaryStage.setScene(new Scene(rootNode, 600, 400));
         primaryStage.show();
     }
 

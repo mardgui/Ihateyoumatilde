@@ -30,7 +30,7 @@ public class Main extends Application {
         Parent rootNode = (Parent) fxmlLoader.load(getClass().getResourceAsStream(fxmlFile));
         houseController = fxmlLoader.getController();
 
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Home Automation System - Group N FTW");
         primaryStage.setScene(new Scene(rootNode, 1200, 800));
         primaryStage.show();
     }
